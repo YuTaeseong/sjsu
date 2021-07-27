@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "SJSU",
+    "slug": "SJSU",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "SJSU"
+}
