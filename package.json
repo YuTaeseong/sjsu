@@ -4,7 +4,8 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "web": "expo start --web",
-    "start": "react-native start"
+    "start": "react-native start",
+    "deploy": "gh-pages -d docs"
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.10",
@@ -28,7 +29,9 @@
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0"
+    "@babel/core": "^7.9.0",
+    "gh-pages": "^3.2.3"
   },
-  "private": true
+  "private": true,
+  "homepage": "https://yutaeseong.github.io/sjsu/"
 }
