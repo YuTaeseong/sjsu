@@ -24,7 +24,15 @@ function ChooseButtons({navigation}) {
     )
 }
 
-export function HomeScreen({navigation}) {
+export function HomeScreen({navigation, route}) {
+    React.useEffect(()=>{
+      if(route.params?.length){
+        console.log(route.params?.length)
+      }
+    }, [route.params?.length])
+
+    console.log(route.params?.length);
+
     return (
         <SafeAreaProvider>
             <Header
@@ -36,12 +44,12 @@ export function HomeScreen({navigation}) {
             <View style={{flex : 1}}>
                 <ChooseButtons navigation={navigation}/>
             </View>
-            <View style={{flex : 4, justifyContent: 'center',}}>
+            <View style={{flex : 10, justifyContent: 'center',}}>
                 <View style={{flex : 1, justifyContent: 'center', alignItems : 'center'}}>
                     <Text h3>Recommend</Text>
                 </View>
                 <View style={{flex : 10, justifyContent: 'center',}}>
-                    <CarouselCards/>
+                    <CarouselCards length = {route.params?.length ?? 3}/>
                 </View>
             </View>
         </SafeAreaView>
@@ -73,7 +81,7 @@ function ModalByBodyScreen({ navigation }) {
           placeholder='BUDGET'
           leftIcon={{ type: 'font-awesome', name: 'money' }}
         />
-        <Button onPress={() => navigation.goBack()} title="Submit" />
+        <Button onPress={() => navigation.navigate('Home',{length : 1})} title="Submit" />
       </View>
     );
   }
@@ -93,7 +101,7 @@ function ModalByItemScreen({ navigation }) {
             }
         }
       />
-        <Button onPress={() => navigation.goBack()} title="Submit" />
+        <Button onPress={() => navigation.navigate('Home',{length : 2})} title="Submit" />
       </View>
     );
   }

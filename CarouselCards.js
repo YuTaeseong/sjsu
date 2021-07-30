@@ -5,18 +5,18 @@ import CarouselCardItem, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselCardItem'
 import data from './data'
 import { useNavigation } from '@react-navigation/native';
 
-const CarouselCards = () => {
+const CarouselCards = ({length}) => {
   const [index, setIndex] = React.useState(0)
   const isCarousel = React.useRef(null)
   const navigation = useNavigation()
-  
+  console.log(length)
   return (
     <View>
       <Carousel
         layout="default"
         layoutCardOffset={9}
         ref={isCarousel}
-        data={data}
+        data={data.slice(0,length)}
         renderItem={CarouselCardItem}
         sliderWidth={SLIDER_WIDTH}
         itemWidth={ITEM_WIDTH}
@@ -25,7 +25,7 @@ const CarouselCards = () => {
         navigation = {navigation}
       />
       <Pagination
-        dotsLength={data.length}
+        dotsLength={length}
         activeDotIndex={index}
         carouselRef={isCarousel}
         dotStyle={{
