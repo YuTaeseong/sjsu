@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, SafeAreaView } from 'react-native';
 import CarouselCards from './CarouselCards';
-import { Header, Button, Text, Input, SearchBar } from 'react-native-elements'
+import { Header, Button, Text, Input, SearchBar, Card, Image } from 'react-native-elements'
 import { SafeAreaProvider} from 'react-native-safe-area-context';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -100,12 +100,35 @@ function ModalByItemScreen({ navigation }) {
 
 function ModalDetailsScreen({ navigation, route }) {
     const item = route.params?.item ?? 'defaultValue';
+    console.log(item);
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{ fontSize: 30 }}>This is a modal!</Text>
-        <Text> {item.title}</Text>
-        <Button onPress={() => navigation.goBack()} title="Submit" />
-      </View>
+      <>
+        <Image
+          style={{ width: "100%", height: 300 }}
+          resizeMode="contain"
+          source={{
+            uri:
+              item.imgUrl
+          }}
+        />
+        <Card>
+          <Card.Title>{item.title}</Card.Title>
+          <Card.Divider/>
+          {
+            item.subItems.map((subItem, index) => {
+              return (
+                <View key={index} style={{flexDirection:'row'}}>
+                  <Image
+                    source={{ uri: subItem.imgUrl }}
+                    style={{ width: 100, height: 100 }}
+                  />
+                  <Text h4>{subItem.name}</Text>
+                </View>
+              );
+            })
+          }
+      </Card>
+      </>
     );
   }
 

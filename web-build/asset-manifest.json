@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/sjsu/static/js/app.23d6fb68.chunk.js",
-    "app.js.map": "/sjsu/static/js/app.23d6fb68.chunk.js.map",
+    "app.js": "/sjsu/static/js/app.027e8c52.chunk.js",
+    "app.js.map": "/sjsu/static/js/app.027e8c52.chunk.js.map",
     "runtime~app.js": "/sjsu/static/js/runtime~app.edf38ec2.js",
     "runtime~app.js.map": "/sjsu/static/js/runtime~app.edf38ec2.js.map",
-    "static/js/2.c469f1ad.chunk.js": "/sjsu/static/js/2.c469f1ad.chunk.js",
-    "static/js/2.c469f1ad.chunk.js.map": "/sjsu/static/js/2.c469f1ad.chunk.js.map",
+    "static/js/2.bfe383d8.chunk.js": "/sjsu/static/js/2.bfe383d8.chunk.js",
+    "static/js/2.bfe383d8.chunk.js.map": "/sjsu/static/js/2.bfe383d8.chunk.js.map",
     "fonts/AntDesign.ttf": "/sjsu/./fonts/AntDesign.ttf",
     "fonts/Entypo.ttf": "/sjsu/./fonts/Entypo.ttf",
     "fonts/Feather.ttf": "/sjsu/./fonts/Feather.ttf",
@@ -21,7 +21,7 @@
     "index.html": "/sjsu/index.html",
     "manifest.json": "/sjsu/manifest.json",
     "serve.json": "/sjsu/serve.json",
-    "static/js/2.c469f1ad.chunk.js.LICENSE.txt": "/sjsu/static/js/2.c469f1ad.chunk.js.LICENSE.txt",
+    "static/js/2.bfe383d8.chunk.js.LICENSE.txt": "/sjsu/static/js/2.bfe383d8.chunk.js.LICENSE.txt",
     "static/media/bell.png": "/sjsu/static/media/bell.cf04af27.png",
     "static/media/heart.png": "/sjsu/static/media/heart.23b5c2c0.png",
     "static/media/rocket.png": "/sjsu/static/media/rocket.d2f3bf41.png",
@@ -29,7 +29,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.edf38ec2.js",
-    "static/js/2.c469f1ad.chunk.js",
-    "static/js/app.23d6fb68.chunk.js"
+    "static/js/2.bfe383d8.chunk.js",
+    "static/js/app.027e8c52.chunk.js"
   ]
 }
